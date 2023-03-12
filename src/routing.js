@@ -6,7 +6,7 @@ import sharp from 'sharp';
 import toIco from 'to-ico'
 const router = Router();
 
-router.post("/ppp", async (req, res) => {
+router.post("/resizing", async (req, res) => {
     try {
         const file = req.files ? req.files[0] : null;
         const mimeTypeArr = MimeTypes.map(each => each.mimeType);

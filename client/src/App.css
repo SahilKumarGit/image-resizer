@@ -1,0 +1,172 @@
+.App {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.Loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #ffffff80;
+}
+
+.TopNavBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4px 8px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.TopNavBar .right {
+  font-size: 25px;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.TopNavBar .right:hover {
+  background-color: #00000010;
+  border-radius: 8px;
+}
+
+.TopNavBar .left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.TopNavBar .left .IconBox {
+  font-size: 25px;
+  margin-right: 10px;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.TopNavBar .left .IconBox:hover {
+  background-color: #00000010;
+  border-radius: 8px;
+}
+
+.SelectImage {
+  height: 100px;
+  flex: 1;
+  overflow: auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.SelectImage .FileUploader {
+  min-width: 350px;
+  background-color: #b72f2f;
+}
+
+.AfterSelectImage {
+  height: 100px;
+  flex: 1;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  background-color: #00000005;
+}
+
+.AfterSelectImage .left {
+  height: 100%;
+  padding: 20px;
+  width: calc(100% - 300px);
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.AfterSelectImage .left img {
+  max-width: 600px;
+  width: 100%;
+  max-width: 600px;
+  height: fit-content;
+  background-color: #00000005;
+  border-radius: 8px;
+  background-image: repeating-linear-gradient(
+    135deg,
+    #00000001,
+    #00000001 10px,
+    #f1f1f1 10px,
+    #f1f1f1 20px
+  );
+}
+
+.AfterSelectImage .right {
+  background-color: #00000010;
+  height: 100%;
+  padding: 10px;
+  width: 400px;
+  overflow: auto;
+}
+
+.EachElement {
+  position: relative;
+  padding: 8px;
+  min-height: 80px;
+  display: flex;
+  flex-direction: row;
+}
+.EachElement .closeBox {
+  top: 8px;
+  right: 8px;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  color: rgb(213, 213, 213);
+  user-select: none;
+  cursor: pointer;
+}
+.EachElement .left {
+  padding: 0;
+  padding-right: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+.EachElement .closeBox:hover {
+  color: #000000;
+}
+
+@media screen and (max-width: 800px) {
+  .AfterSelectImage {
+    height: fit-content;
+    display: block;
+    overflow: auto;
+  }
+  .AfterSelectImage .left {
+    height: fit-content;
+    width: 100%;
+  }
+
+  .AfterSelectImage .right {
+    height: fit-content;
+    display: block;
+    width: 100%;
+  }
+}

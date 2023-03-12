@@ -6,7 +6,8 @@
   "main": "src/app.js",
   "scripts": {
     "dev": "echo \"Running in development!\" && nodemon src/app",
-    "start": "echo \"Running in production!\" && node src/app"
+    "start": "echo \"Running in production!\" && node src/app",
+    "build": "echo \"Build Frontend App...\" && cd client && npm run build && cd .. && echo \"Build Done!\""
   },
   "repository": {
     "type": "git",

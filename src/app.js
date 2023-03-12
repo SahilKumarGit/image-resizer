@@ -8,8 +8,16 @@ import router from "./routing.js";
     const app = express();
     app.use(express.json());
     app.use(multer().any());
-    app.use("/", router);
-    
+    app.use("/api/", router);
+
+
+    app.use(express.static('./client/build'));
+
+    app.get('/*', (req, res) =>
+      res.sendFile('index.html', { root: 'client/build/' })
+    );
+
+
     app.listen($PORT, (_e) => {
       if (_e) return console.log("Server Crashed!", _e);
       console.log("Server Connected successfully!");
