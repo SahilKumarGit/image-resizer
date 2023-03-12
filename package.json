@@ -7,7 +7,8 @@
   "scripts": {
     "dev": "echo \"Running in development!\" && nodemon src/app",
     "start": "echo \"Running in production!\" && node src/app",
-    "build": "echo \"Build Frontend App...\" && cd client && npm i && npm run build && cd .. && echo \"Build Done!\" && echo \"Build Backend App...\" && npm i && echo \"Build Done!\""
+    "build": "echo \"Build Frontend App...\" && cd client && npm i && npm run build && cd .. && echo \"Build Done!\" && echo \"Build Backend App...\" && npm i && echo \"Build Done!\"",
+    "prod": "echo \"Build Backend App...\" && npm i && echo \"Build Done!\""
   },
   "repository": {
     "type": "git",
